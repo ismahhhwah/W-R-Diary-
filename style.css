@@ -5478,70 +5478,92 @@ body.anniversary-open {
 }
 
 /* ========================================
-   MEETING GAME AVATARS
+   MEETING GAME AVATARS (RESPONSIVE)
 ======================================== */
+
+.meeting-game {
+    --avatar: 150px;
+}
 
 .meeting-character {
     position: relative;
+    width: var(--avatar);
+    flex: 0 0 var(--avatar);
 }
 
-/* Make both avatars perfectly round */
+/* Bulat sempurna */
 .meeting-character img {
-    width: 150px;
-    height: 150px;
+    width: var(--avatar);
+    height: var(--avatar);
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
     display: block;
     position: relative;
     z-index: 2;
+    box-sizing: border-box;
 }
 
 /* HER - PINK */
 .girl-character img {
     border: 4px solid #e7a8be;
-    box-sizing: border-box;
 }
 
 /* HIM - BLUE */
 .boy-character img {
     border: 4px solid #8ebbd8;
-    box-sizing: border-box;
 }
 
-/* Soft glow behind the circle */
-.girl-character .avatar-glow {
+/* Glow belakang bulat */
+.meeting-character .avatar-glow {
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: var(--avatar);
+    height: var(--avatar);
     border-radius: 50%;
-    background: #e7a8be;
     opacity: 0.18;
     filter: blur(12px);
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 0;
+}
+
+.girl-character .avatar-glow {
+    background: #e7a8be;
 }
 
 .boy-character .avatar-glow {
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
     background: #8ebbd8;
-    opacity: 0.18;
-    filter: blur(12px);
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 0;
 }
 
-/* Keep name underneath */
 .character-name {
     position: relative;
     z-index: 3;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .meeting-game {
+        --avatar: 110px;
+    }
+}
+
+/* Phone */
+@media (max-width: 650px) {
+    .meeting-game {
+        --avatar: 88px;
+    }
+
+    .meeting-character img {
+        border-width: 3px;
+    }
+}
+
+/* Phone kecil */
+@media (max-width: 430px) {
+    .meeting-game {
+        --avatar: 78px;
+    }
 }
 
 
