@@ -4153,8 +4153,11 @@ a {
 .date-gate-box {
     position: relative;
 
-    width: min(320px, 100%);
-    padding: 48px 38px 42px;
+    width: 320px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+
+    padding: 42px 28px 36px;
 
     text-align: center;
 
@@ -4186,7 +4189,6 @@ a {
     transform: translateY(0) scale(1);
     opacity: 1;
 }
-
 
 /* =========================================
    CLOSE BUTTON
