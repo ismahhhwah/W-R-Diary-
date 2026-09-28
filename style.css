@@ -4121,11 +4121,15 @@ a {
     inset: 0;
     z-index: 9999;
 
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
-    padding: 20px;
+    padding: 16px;
 
     background: rgba(35, 24, 32, 0.58);
     backdrop-filter: blur(10px);
@@ -4137,6 +4141,8 @@ a {
     transition:
         opacity 0.35s ease,
         visibility 0.35s ease;
+
+    overflow: hidden;
 }
 
 .date-gate.active {
@@ -4154,10 +4160,13 @@ a {
     position: relative;
 
     width: 320px;
-    max-width: calc(100vw - 40px);
+    max-width: 100%;
+
     box-sizing: border-box;
 
-    padding: 42px 28px 36px;
+    padding: 42px 24px 36px;
+
+    margin: 0 auto;
 
     text-align: center;
 
@@ -4189,6 +4198,7 @@ a {
     transform: translateY(0) scale(1);
     opacity: 1;
 }
+
 
 /* =========================================
    CLOSE BUTTON
@@ -4374,30 +4384,24 @@ a {
    MOBILE
 ========================================= */
 
-@media (max-width: 300px) {
+@media (max-width: 430px) {
 
     .date-gate {
-        padding: 16px;
+        padding: 12px;
     }
 
     .date-gate-box {
-        padding: 42px 24px 30px;
+        width: 300px;
+        max-width: 100%;
+
+        padding: 36px 20px 28px;
 
         border-radius: 24px;
     }
 
     .date-gate-box h2 {
-        font-size: 39px;
+        font-size: 35px;
     }
-
-    .date-gate-text {
-        font-size: 13px;
-    }
-
-    .date-input-wrapper input {
-        padding: 13px 14px;
-    }
-}
 
 
 /* =========================================
