@@ -5541,6 +5541,41 @@ body.anniversary-open {
     z-index: 3;
 }
 
+/* =========================================
+   DATE GATE - PREVENT MOBILE OVERFLOW
+========================================= */
+
+.date-gate {
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.date-gate-box {
+    width: 320px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.date-input-wrapper {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.date-input-wrapper input {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.date-continue-btn {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
 
 
 
