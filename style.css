@@ -4154,6 +4154,7 @@ a {
     position: relative;
 
     width: min(460px, 100%);
+    box-sizing: border-box;
     padding: 48px 38px 42px;
 
     text-align: center;
