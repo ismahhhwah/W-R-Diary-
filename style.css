@@ -4153,7 +4153,7 @@ a {
 .date-gate-box {
     position: relative;
 
-    width: min(320px, 100%);
+    width: min(460px, 100%);
     padding: 48px 38px 42px;
 
     text-align: center;
@@ -4372,7 +4372,7 @@ a {
    MOBILE
 ========================================= */
 
-@media (max-width: 300px) {
+@media (max-width: 650px) {
 
     .date-gate {
         padding: 16px;
@@ -4416,7 +4416,6 @@ a {
         font-size: 16px;
     }
 }
-
 /* =========================================
    CHAPTER 1 LOCK SYSTEM
 ========================================= */
