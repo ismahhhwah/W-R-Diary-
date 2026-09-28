@@ -4099,7 +4099,7 @@ a {
 
 /* Mobile */
 
-@media (max-width: 650px) {
+@media (max-width: 300px) {
 
     #dinoScreen .dino-star-obstacle {
         width: 38px !important;
