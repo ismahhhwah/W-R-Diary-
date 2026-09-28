@@ -4156,11 +4156,6 @@ a {
     width: min(460px, 100%);
     max-width: calc(100vw - 40px);
 
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-
     padding: 48px 38px 42px;
 
     text-align: center;
