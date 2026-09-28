@@ -4302,7 +4302,7 @@ a {
 
 .date-input-wrapper input {
     width: calc(100% - 2px);
-    padding: 14px 16px;
+    padding: 14px 14px;
 
     box-sizing: border-box;
 
