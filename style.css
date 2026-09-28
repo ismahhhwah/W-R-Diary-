@@ -4125,7 +4125,7 @@ a {
     align-items: center;
     justify-content: center;
 
-   padding: 20px 20px 20px 0;
+   padding: 20px;
 
     background: rgba(35, 24, 32, 0.58);
     backdrop-filter: blur(10px);
@@ -4301,7 +4301,7 @@ a {
 }
 
 .date-input-wrapper input {
-    width: 100%;
+    width: calc(100% - 2px);
     padding: 14px 16px;
 
     box-sizing: border-box;
