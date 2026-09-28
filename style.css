@@ -4154,8 +4154,6 @@ a {
     position: relative;
 
     width: min(460px, 100%);
-    max-width: calc(100vw - 40px);
-
     padding: 48px 38px 42px;
 
     text-align: center;
@@ -4175,7 +4173,7 @@ a {
         0 25px 70px rgba(50, 30, 40, 0.25),
         0 0 0 1px rgba(255, 255, 255, 0.6);
 
-    transform: translateY(0);
+    transform: translateY(20px) scale(0.96);
 
     transition:
         transform 0.4s ease,
@@ -5540,9 +5538,6 @@ body.anniversary-open {
     position: relative;
     z-index: 3;
 }
-
-
-
 
 
 
