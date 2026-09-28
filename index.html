@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Our Little Universe ✦</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Parisienne&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+```
+
+</head>
+
+<body>
+
+<!-- =========================
+     BACKGROUND
+========================== -->
+
+<div class="stars"></div>
+<div class="shooting-star"></div>
+
+<!-- =========================
+     BACKGROUND MUSIC
+========================== -->
+
+<audio id="bgMusic" loop>
+    <source src="terbuang dalam waktu.mp3" type="audio/mpeg">
+</audio>
+
+<!-- =========================
+     NAVIGATION
+========================== -->
+
+<nav class="navbar">
+
+```
+<div class="nav-logo">
+    <span>✦</span>
+    <strong>W &amp; R Diary</strong>
+</div>
+
+<div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#story">Our Story</a>
+    <a href="#letter">Letter</a>
+    <a href="#game">Game</a>
+    <a href="#ending">Us</a>
+</div>
+
+<button class="music-btn" id="musicBtn" aria-label="Play or pause music">
+    ♫
+</button>
+```
+
+</nav>
+
+<!-- =========================
+     HERO
+========================== -->
+
+<section class="hero" id="home">
+
+```
+<div class="hero-content">
+
+    <p class="small-label">A LITTLE SOMETHING FOR YOU</p>
+
+    <h1>
+        To My<br>
+        <span>Favourite Person</span>
+    </h1>
+
+    <p class="hero-description">
+        Two people. Two colours. One little universe.
+    </p>
+
+    <div class="hero-stars">
+        <span>✦</span>
+        <span>♡</span>
+        <span>✦</span>
+    </div>
+
+    <button class="main-btn" onclick="openDateGate()">
+        Open Our Story
+        <span>→</span>
+    </button>
+
+</div>
+
+<div class="hero-bottom">
+    <span>scroll to explore</span>
+    <div class="scroll-line"></div>
+</div>
+```
+
+</section>
+
+<!-- =========================
+     DATE GATE POPUP
+========================== -->
+
+<div class="date-gate" id="dateGate">
+
+```
+<div class="date-gate-box">
+
+    <button class="close-popup" onclick="closeDateGate()">
+        ×
+    </button>
+
+    <div class="date-gate-stars">
+        ✦　♡　✦
+    </div>
+
+    <p class="section-label">
+        OUR LITTLE STORY
+    </p>
+
+    <h2>
+        When did our<br>
+        <span>story begin?</span>
+    </h2>
+
+    <p class="date-gate-text">
+        A little date before we open<br>
+        our story together. ♡
+    </p>
+
+    <div class="date-input-wrapper">
+
+        <label for="storyDate">
+            OUR SPECIAL DATE
+        </label>
+
+        <input
+            type="date"
+            id="storyDate"
+        >
+
+    </div>
+
+    <p class="date-error" id="dateError">
+        That's not our date yet... try again ♡
+    </p>
+
+    
+
+    <button
+        class="popup-btn date-continue-btn"
+        onclick="checkStoryDate()"
+    >
+        Continue ♡
+    </button>
+
+</div>
+```
+
+</div>
+
+<!-- =========================
+     ANNIVERSARY SCREEN
+========================== -->
+<!-- LOVE FIREWORKS -->
+<div class="love-fireworks" id="loveFireworks">
+    <span class="firework-heart">♡</span>
+    <span class="firework-heart">♥</span>
+    <span class="firework-heart">♡</span>
+    <span class="firework-star">✦</span>
+    <span class="firework-star">✧</span>
+    <span class="firework-star">✦</span>
+    <span class="firework-spark">•</span>
+    <span class="firework-spark">•</span>
+    <span class="firework-spark">•</span>
+    <span class="firework-spark">✦</span>
+</div>
+
+<div
+    id="anniversaryScreen"
+    class="anniversary-screen"
+>
+
+```
+<div class="anniversary-box">
+
+    <div class="anniversary-stars">
+        ✦　♡　✦
+    </div>
+
+    <p class="section-label">
+        OUR LITTLE UNIVERSE
+    </p>
+
+    <h2>
+        Happy Anniversary,<br>
+        <span>My Love ♡</span>
+    </h2>
+
+    <p class="anniversary-subtitle">
+        Every second with you is another
+        little moment worth keeping.
+    </p>
+
+    <!-- LIVE ANNIVERSARY COUNTER -->
+
+    <div class="anniversary-counter">
+
+        <div class="counter-item">
+            <strong id="annYears">0</strong>
+            <span>YEARS</span>
+        </div>
+
+        <div class="counter-item">
+            <strong id="annMonths">0</strong>
+            <span>MONTHS</span>
+        </div>
+
+        <div class="counter-item">
+            <strong id="annDays">0</strong>
+            <span>DAYS</span>
+        </div>
+
+        <div class="counter-item">
+            <strong id="annHours">0</strong>
+            <span>HOURS</span>
+        </div>
+
+        <div class="counter-item">
+            <strong id="annMinutes">0</strong>
+            <span>MINUTES</span>
+        </div>
+
+        <div class="counter-item">
+            <strong id="annSeconds">0</strong>
+            <span>SECONDS</span>
+        </div>
+
+    </div>
+
+    <div class="anniversary-divider">
+        ✦ ♡ ✦
+    </div>
+
+    <p class="anniversary-message">
+        And this is only the beginning
+        of our little story. ♡
+    </p>
+
+    <button
+        class="main-btn"
+        onclick="enterChapterOne()"
+    >
+        Begin Chapter 1
+        <span>→</span>
+    </button>
+
+</div>
+```
+
+</div>
+
+<!-- =========================
+     OUR STORY
+========================== -->
+
+<section class="section story-section" id="story">
+
+```
+<div id="chapterOneContent">
+
+    <div class="section-heading">
+
+        <p class="section-label">
+            CHAPTER ONE
+        </p>
+
+        <h2>
+            It all started<br>
+            <span>with a game...</span>
+        </h2>
+
+        <p>
+            Maybe neither of us knew it at the time,
+            but one random game would eventually become
+            the beginning of something much more.
+        </p>
+
+    </div>
+
+
+    <!-- AVATAR GAME -->
+
+    <div class="meeting-game">
+
+        <div class="meeting-character girl-character">
+
+            <div class="avatar-glow pink-glow"></div>
+
+            <img
+                src="rose ava.jpg"
+                alt="Girl avatar"
+            >
+
+            <div class="character-name">
+                <span>HER</span>
+                <strong>♡</strong>
+            </div>
+
+        </div>
+
+
+        <div class="meeting-middle">
+
+            <div class="game-stars-line">
+                ✦　✧　✦　✧　✦
+            </div>
+
+            <div class="meeting-heart">
+                ♡
+            </div>
+
+            <p>
+                THE GAME THAT STARTED IT ALL
+            </p>
+
+        </div>
+
+
+        <div class="meeting-character boy-character">
+
+            <div class="avatar-glow blue-glow"></div>
+
+            <img
+                src="rian ava.jpg"
+                alt="Boy avatar"
+            >
+
+            <div class="character-name">
+                <span>HIM</span>
+                <strong>★</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="meeting-caption">
+
+        <span>🎮</span>
+
+        <p>
+            Two strangers.<br>
+            One game.<br>
+            One story we never expected.
+        </p>
+
+        <span>🎮</span>
+
+    </div>
+
+
+    <!-- TIMELINE -->
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">
+                01
+            </div>
+
+            <div class="timeline-card">
+
+                <div class="timeline-icon">
+                    🎮
+                </div>
+
+                <div>
+
+                    <span class="timeline-small">
+                        THE BEGINNING
+                    </span>
+
+                    <h3>
+                        Two strangers joined the same game.
+                    </h3>
+
+                    <p>
+                        We were just two people behind screens,
+                        playing a game and knowing absolutely
+                        nothing about each other.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-line"></div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">
+                02
+            </div>
+
+            <div class="timeline-card">
+
+                <div class="timeline-icon">
+                    💬
+                </div>
+
+                <div>
+
+                    <span class="timeline-small">
+                        A LITTLE CHAT
+                    </span>
+
+                    <h3>
+                        One conversation became another.
+                    </h3>
+
+                    <p>
+                        Somehow, talking to you became something
+                        I started looking forward to.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-line"></div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">
+                03
+            </div>
+
+            <div class="timeline-card">
+
+                <div class="timeline-icon">
+                    🌙
+                </div>
+
+                <div>
+
+                    <span class="timeline-small">
+                        SOMEHOW...
+                    </span>
+
+                    <h3>
+                        You became my favourite person.
+                    </h3>
+
+                    <p>
+                        Somewhere between all the random talks,
+                        jokes and late nights, you became
+                        someone really special to me.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     OUR UNIVERSE
+========================== -->
+
+<section class="universe-section">
+
+```
+<div class="universe-glow"></div>
+
+<div class="section-heading light-heading">
+
+    <p class="section-label">
+        OUR LITTLE UNIVERSE
+    </p>
+
+    <h2>
+        Different colours,<br>
+        <span>same sky.</span>
+    </h2>
+
+</div>
+
+
+<div class="universe-photos">
+
+    <div class="universe-photo pink-photo">
+
+        <div class="photo-frame">
+
+            <img
+                src="weda.jpg"
+                alt="Her photo"
+            >
+
+            <div class="photo-sparkles">
+                ✦ ✧
+            </div>
+
+        </div>
+
+        <span>HER</span>
+
+        <h3>
+            Pink
+        </h3>
+
+        <p>
+            your little pink star 🌸
+        </p>
+
+    </div>
+
+
+    <div class="universe-center">
+
+        <div class="big-star">
+            ✦
+        </div>
+
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+
+        <p>
+            somewhere between
+        </p>
+
+        <strong>
+            you + me
+        </strong>
+
+    </div>
+
+
+    <div class="universe-photo blue-photo">
+
+        <div class="photo-frame">
+
+            <img
+                src="rian.jpg"
+                alt="His photo"
+            >
+
+            <div class="photo-sparkles">
+                ✧ ✦
+            </div>
+
+        </div>
+
+        <span>HIM</span>
+
+        <h3>
+            Blue
+        </h3>
+
+        <p>
+            my favourite blue star 💙
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="universe-quote">
+
+    <span>“</span>
+
+    You love blue.<br>
+    I love pink.<br>
+
+    <strong>
+        Somehow, somewhere between the two,
+        we found us.
+    </strong>
+
+    <span>”</span>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     WHY I LIKE YOU
+========================== -->
+
+<section class="section stars-section">
+
+```
+<div class="section-heading">
+
+    <p class="section-label">
+        A FEW LITTLE THINGS
+    </p>
+
+    <h2>
+        Click the stars<br>
+        <span>
+            to see why I love you.
+        </span>
+    </h2>
+
+    <p>
+        Five little reasons, although honestly,
+        there are probably way more than five.
+    </p>
+
+</div>
+
+
+<div class="memory-stars">
+
+    <button
+        class="memory-star star-one"
+        onclick="showMemory(1)"
+    >
+        ✦
+    </button>
+
+    <button
+        class="memory-star star-two"
+        onclick="showMemory(2)"
+    >
+        ✦
+    </button>
+
+    <button
+        class="memory-star star-three"
+        onclick="showMemory(3)"
+    >
+        ✦
+    </button>
+
+    <button
+        class="memory-star star-four"
+        onclick="showMemory(4)"
+    >
+        ✦
+    </button>
+
+    <button
+        class="memory-star star-five"
+        onclick="showMemory(5)"
+    >
+        ✦
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     MEMORY POPUP
+========================== -->
+
+<div
+    class="memory-popup"
+    id="memoryPopup"
+>
+
+```
+<div class="memory-popup-box">
+
+    <button
+        class="close-popup"
+        onclick="closeMemory()"
+    >
+        ×
+    </button>
+
+    <div id="memoryIcon">
+        ✦
+    </div>
+
+    <p id="memoryTitle">
+        A little reason
+    </p>
+
+    <h3 id="memoryText">
+        Something special.
+    </h3>
+
+    <button
+        class="popup-btn"
+        onclick="closeMemory()"
+    >
+        Keep exploring ♡
+    </button>
+
+</div>
+```
+
+</div>
+
+<!-- =========================
+     LOVE LETTER
+========================== -->
+
+<section
+    class="letter-section"
+    id="letter"
+>
+
+```
+<div class="section-heading light-heading">
+
+    <p class="section-label">
+        CHAPTER TWO
+    </p>
+
+    <h2>
+        A letter<br>
+        <span>for you.</span>
+    </h2>
+
+</div>
+
+
+<div
+    class="envelope-container"
+    id="envelopeContainer"
+>
+
+    <div class="envelope">
+
+        <div class="envelope-back"></div>
+
+
+        <div class="letter-paper">
+
+            <div class="letter-top">
+                <span>♡</span>
+                <span>for my favourite person</span>
+                <span>♡</span>
+            </div>
+
+            <h3>
+                Sayang,
+            </h3>
+
+            <p>
+                Happy 1 Year Anniversary , sayang ! 🤍 Finally , a year — bukan sebulan lagi HAHAHA tidak sangka kan kita boleh sampai sejauh ini kan sayang ? especially dengan kita yang tinggal berjauhan dan berbeza negara . But here we are , still choosing each other sampai hari ini , PROUD TO SAYANG , BABY OR BOTH ! HEHE 🥹💞 lucuuu juga bila baby fikir balik macam mana kita mula kenal HAHAHA siapa sangka seseorang yang baby kenal daripada game boleh jadi seseorang yang begitu penting dalam hidup baby sampai hari ini ? kiw 😛🐊💓 daripada hanya random teammate , sampai jadi orang yang baby harap akan tetap ada dalam hidup baby untuk masa yang akan datang ya sayang 💥🤍 baby bersyukur juga sebab daripada ramai orang yang baby boleh kenal , somehow baby dipertemukan dengan sayang 🥹
+since sebelum ni sayang yang selalu bagi love notes dekat baby setiap hujung bulan , so this time let me , okay sayangkuy ? HEHE 😘💘
+baby tulis letter ni bukan semata - mata sebab anniversary , tapi sebab baby mau ambil sedikit masa untuk menghargai sayang dan semua benda yang sayang sudah lakukan sepanjang kita bersama 👩‍❤️‍👨 sebab baby percaya , semua orang mungkin boleh mencintai seseorang , tapi tidak semua orang tahu bagaimana untuk benar-benar menghargai seseorang yang mereka sayang , kan sayang ? 🥹
+so first of all , terima kasih sebab sudah pilih baby untuk jadi pasangan sayang dan sebab pernah janji yang sayang mau hidup semati sama baby in the future 💖 thank you jugaaa sebab selalu sayang baby dengan sepenuh hati dan ikhlas :( baby nampak semua tu daripada cara sayang layan baby , especially masa baby down atau sedih 😞 orang cakap actions speak louder than words kan sayang ? and baby rasa sayang tunjukkan kedua-duanya 💥
+baby juga mau minta maaf kalau selama kita bersama , masih banyak kurangnya baby . Kalau ada perangai baby yang sayang rasa tidak kena , tegur atau bagitahu baby dengan lembut ya sayang 🥹💕jangan pernah takut untuk cakap apa - apa yang sayang pendam . Luahkan , tegur , atau cerita apa saja yang buat hati sayang rasa lebih tenang . Baby percaya salah satu cara untuk buat hubungan kita terus aman adalah dengan saling jujur dan jelas dengan satu sama lain kan sayang ? 
+And thank you juga sebab selama ni sayang selalu mengalah dan turunkan ego dulu dengan baby 🥹 baby tahu bukan semua benda senang untuk sayang hadap , especially dengan perangai baby HAHAHA 😭 and 
+kalau pernah terdetik dalam hati sayang yang baby sudah tidak sayang sayang lagi , please jangan fikir macam tu ottey sayangku ? baby akan tetap sayang sayang 🤍
+semoga tangki cintanya kita tidak pernah habis , walaupun kadang - kadang perjalanan kita jauh dan susah ya sayang 🥹💓 kita sama - sama doa supaya kita terus pilih satu sama lain , terus jaga satu sama lain , dan suatu hari nanti dapat sampai kepada semua perkara yang pernah kita impikan bersama 💞
+            </p>
+
+
+            <p class="letter-ending">
+                Happy 1 Year, sayang ☄️💥💘
+Thank you for staying 💋
+Thank you for choosing me ❤️‍🔥
+And thank you for being my favourite person ♡
+            </p>
+
+            <div class="signature">
+                Love , 
+Your BabyGurl 🫦💋☄️💞💥
+            </div>
+
+        </div>
+
+
+        <div class="envelope-front"></div>
+
+    </div>
+
+</div>
+
+
+<p class="envelope-hint">
+    Click the envelope to open it ♡
+</p>
+```
+
+</section>
+
+<!-- =========================
+     MINI GAME
+========================== -->
+
+<section
+    class="section game-section"
+    id="game"
+>
+
+```
+<div class="section-heading">
+
+    <p class="section-label">
+        CHAPTER THREE
+    </p>
+
+    <h2>
+        A tiny game<br>
+        <span>for my gamer.</span>
+    </h2>
+
+    <p>
+        Since our story started with a game,
+        I couldn't let you leave without playing one.
+    </p>
+
+</div>
+
+
+<div class="game-box">
+
+    <div class="game-top">
+
+        <div>
+
+            <span>
+                STAR COLLECTION
+            </span>
+
+            <h3>
+                Catch the stars ✦
+            </h3>
+
+        </div>
+
+
+        <div class="score">
+
+            <span>
+                STARS
+            </span>
+
+            <strong id="score">
+                0 / 5
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="game-area"
+        id="gameArea"
+    >
+
+        <div
+            class="game-start"
+            id="gameStart"
+        >
+
+            <div class="game-big-star">
+                ★
+            </div>
+
+            <h3>
+                Ready?
+            </h3>
+
+            <p>
+                Find and click all 5 stars.
+            </p>
+
+            <button
+                class="game-btn"
+                onclick="startGame()"
+            >
+                Start Game
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="game-message"
+        id="gameMessage"
+    >
+
+        <div class="win-star">
+            ✦
+        </div>
+
+        <h3>
+            You found them all! 🥹
+        </h3>
+
+        <p>
+            Just like how I somehow found you.
+        </p>
+
+        <button onclick="showFinalMessage()">
+            Open your surprise ♡
+        </button>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     MEMORIES WITHOUT PHOTOS
+========================== -->
+
+<section class="section memories-section">
+
+```
+<div class="section-heading">
+
+    <p class="section-label">
+        OUR MEMORIES
+    </p>
+
+    <h2>
+        The memories<br>
+        <span>I'll always keep.</span>
+    </h2>
+
+    <p>
+        Not every beautiful memory needs a picture
+        to make it special.
+    </p>
+
+</div>
+
+
+<div class="memory-grid">
+
+    <div class="memory-card">
+
+        <div class="memory-card-icon">
+            🎮
+        </div>
+
+        <span>
+            01
+        </span>
+
+        <h3>
+            The Beginning
+        </h3>
+
+        <p>
+            how we meet , it was lucu and unexpected HAHAHAHA
+        </p>
+
+    </div>
+
+
+    <div class="memory-card">
+
+        <div class="memory-card-icon">
+            🌙
+        </div>
+
+        <span>
+            02
+        </span>
+
+        <h3>
+            My Favourite Memory
+        </h3>
+
+        <p>
+            My Favourite Memory tu semua sayang bila kita happy sedih gaduh i mean how we handle things especially kita gaduh baby suka macam kita gila but at the same boleh jadi matang gila gitu HAHA
+        </p>
+
+    </div>
+
+
+    <div class="memory-card special-memory">
+
+        <div class="memory-card-icon">
+            ♡
+        </div>
+
+        <span>
+            03
+        </span>
+
+        <h3>
+            The One I'll Never Forget
+        </h3>
+
+        <p>
+            bila sayang belikan baby cincin pastu baby cakap baby more suka silver tapi baby okay ja pastu sayang g tukar i mean look at the effort and the love behind it 🥹💞 and sayang belikan anak kita which are BUBUUU AND BUBAAA
+        </p>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     FIRST PHOTO TOGETHER
+========================== -->
+
+<section class="first-photo-section">
+
+```
+<div class="first-photo-content">
+
+    <p class="section-label">
+        A LITTLE GLIMPSE
+    </p>
+
+    <h2>
+        Preview<br>
+        <span>of Us.</span>
+    </h2>
+
+
+    <div class="first-photo-layout">
+
+
+        <!-- PHOTO SIDE -->
+
+        <div class="first-photo-card">
+
+            <div class="photo-tape"></div>
+
+            <div class="first-photo-polaroid">
+
+                <div class="first-photo-inner">
+
+                    <img
+                        src="glimpse of us.jpg"
+                        alt="A little preview of us"
+                        class="reserved-photo"
+                    >
+
+                    <span>
+                        RESERVED FOR
+                    </span>
+
+                    <h3>
+                        OUR FIRST PHOTO
+                    </h3>
+
+                    <small>
+                        coming soon ♡
+                    </small>
+
+                </div>
+
+                <div class="polaroid-caption">
+                    someday, you + me ✦
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LITTLE NOTE -->
+
+        <div class="love-note">
+
+            <div class="note-pin">
+                ✦
+            </div>
+
+            <div class="note-header">
+                <span>
+                    A LITTLE NOTE FOR YOU
+                </span>
+
+                <span>
+                    ♡
+                </span>
+            </div>
+
+
+            <p class="note-greeting">
+                Dear Sayangku Desta Febrian , 
+Bintangku , Cinta Matiku AW 🤍
+            </p>
+
+
+            <p>
+                SEMANGAT KERJANYA SAYANGKU! 🫶🏻
+Terima kasih sebab selalu korbankan tenaga dan masa sayang walaupun baby tahu sayang penat . Kalau penat , sandarkan bahu dulu dekat baby ya , sayangku 💖 baby ada dicini hehe 🤍
+sayang tahu ka apa kejayaan sayang ? 
+tidak tahu kan ? MWEHEHEHE
+Kejayaan sayang bukan sebab sayang sudah berada di tempat work , bukan juga sebanyak mana kerja yang sayang dapat lakukan hari tu . 
+tapi bagi baby , kejayaan sayang ialah semangat dan kefikiran sayang yang tetap mahu pergi kerja , walaupun baby tahu sayang mungkin penat , banyak fikiran macam tu :( semangat  sayang tu yang baby hargai dan banggakan ☄️🤟🏻🙌🏻🥹
+thank you juga sebab selalu berani dan mahu berusaha untuk membanggakan parents sayang 💘baby tahu bukan semuanya mudah , tapi baby harap sayang tahu yang usaha sayang tu tetap ada nilainya 💓❤️‍🔥
+and kalau satu hari nanti sayang rasa macam tiada siapa yang hargai sayang , baby ada !!! 💖❤️‍🔥💓💘💋💕🌈🤍
+di belakang , di depan , atas , bawah sayang HAHAHAHA AIPPP STTT 😭🐊
+mana - mana sayang pergi pun baby ada 😭🤍
+baby doakan sayang sukses selalu , murah rezeki , dipermudahkan segala urusan dan sentiasa diberikan kekuatan ya sayangkuuu 💞🤲🏻
+            </p>
+
+            <p class="note-special">
+                YA ALLAH , MURAHKANLAH REZEKI SI RIAN SELALU , AAMIN 🤲🏻
+I love you , sayangkuuu ♡ 😽🫶🏻
+            </p>
+
+
+            <div class="note-divider">
+                ✦ ─── ♡ ─── ✦
+            </div>
+
+
+            <div class="note-footer">
+
+                <span>
+                    Until then...
+                </span>
+
+                <strong>
+                   Hati - Hati selalu pergi kerja or kemana2 ya sayangku and Jangan lupa rehat ♡ kita boleh penat , tapi kita tidak boleh berhenti terus melangkah ! hehe papay love you again 💕
+                </strong>
+
+            </div>
+
+
+            <div class="note-signature">
+                Sincerely , 
+Your Biggest Supporter ♡
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <p class="photo-note">
+
+        <span>✦</span>
+
+        We already have two stars.
+        Now we just need one picture.
+
+        <span>✦</span>
+
+    </p>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     DINO DISTANCE GAME
+========================== -->
+
+<section class="distance-section">
+
+```
+<div class="distance-content">
+
+    <p class="section-label">
+        UNTIL WE FINALLY MEET
+    </p>
+
+    <h2>
+        Different places.<br>
+        <span>Same little universe.</span>
+    </h2>
+
+
+    <div class="dino-game">
+
+        <div class="dino-top">
+
+            <span>
+                ✦ DISTANCE RUN ✦
+            </span>
+
+            <strong id="dinoScore">
+                0
+            </strong>
+
+        </div>
+
+
+        <div
+            class="dino-screen"
+            id="dinoScreen"
+        >
+
+            <div class="dino-cloud cloud-one">
+                ☁
+            </div>
+
+            <div class="dino-cloud cloud-two">
+                ☁
+            </div>
+
+
+            <div class="dino-character dino-girl">
+
+                <img
+                    src="little weda.jpg"
+                    alt="Girl"
+                >
+
+                <span>
+                    YOU
+                </span>
+
+            </div>
+
+
+            <div class="dino-road">
+
+                <div class="road-line"></div>
+
+                <div
+                    class="dino-star-obstacle obstacle-one"
+                    onclick="collectDinoStar(this)"
+                >
+                    ★
+                </div>
+
+                <div
+                    class="dino-star-obstacle obstacle-two"
+                    onclick="collectDinoStar(this)"
+                >
+                    ★
+                </div>
+
+                <div
+                    class="dino-star-obstacle obstacle-three"
+                    onclick="collectDinoStar(this)"
+                >
+                    ★
+                </div>
+
+            </div>
+
+
+            <div class="dino-character dino-boy">
+
+                <img
+                    src="little rian.jpg"
+                    alt="Boy"
+                >
+
+                <span>
+                    HIM
+                </span>
+
+            </div>
+
+
+            <div class="meet-point">
+
+                <div>
+                    ♡
+                </div>
+
+                <span>
+                    ONE DAY
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="dino-instruction">
+            Click the stars and help us get closer. ⭐
+        </div>
+
+    </div>
+
+
+    <p class="distance-text">
+        One day, these two stars won't have to
+        meet through a screen anymore.
+    </p>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     FINAL
+========================== -->
+
+<section
+    class="ending-section"
+    id="ending"
+>
+
+```
+<div class="ending-stars">
+
+    <span>✦</span>
+    <span>✧</span>
+    <span>✦</span>
+    <span>·</span>
+    <span>✦</span>
+    <span>✧</span>
+
+</div>
+
+
+<div class="ending-content">
+
+    <p class="section-label">
+        AND THIS ISN'T THE END...
+    </p>
+
+    <h2>
+        This is just<br>
+        <span>the first chapter.</span>
+    </h2>
+
+
+    <div class="chapters">
+
+        <div>
+            <span>CHAPTER 01</span>
+            <p>
+                We met online 🎮
+            </p>
+        </div>
+
+        <div>
+            <span>CHAPTER 02</span>
+            <p>
+                We became us ♡
+            </p>
+        </div>
+
+        <div>
+            <span>CHAPTER 03</span>
+            <p>
+                We finally meet ⭐
+            </p>
+        </div>
+
+        <div>
+            <span>CHAPTER 04</span>
+            <p>
+                Still unwritten...
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="final-divider">
+        ✦ ───────── ♡ ───────── ✦
+    </div>
+
+
+    <p class="final-message">
+        Once Again, 
+    </p>
+
+    <h3 class="anniversary-text">
+        Happy Anniversary,<br>
+        my love. ♡
+    </h3>
+
+    <p class="final-signature">
+        from your loves one ♡<br>
+    
+    </p>
+
+</div>
+
+
+<div class="footer">
+    made with love &amp; a little bit of stardust ✦
+</div>
+```
+
+</section>
+
+<!-- =========================
+     FINAL POPUP
+========================== -->
+
+<div
+    class="final-popup"
+    id="finalPopup"
+>
+
+```
+<div class="final-popup-box">
+
+    <button
+        onclick="closeFinalMessage()"
+        class="close-popup"
+    >
+        ×
+    </button>
+
+    <div class="popup-stars">
+        ✦ ✧ ✦
+    </div>
+
+    <h2>
+        You found<br>
+        <span>my heart.</span>
+    </h2>
+
+    <p>
+        And if you ever wonder how much you mean to me,
+        just come back here and remember:
+    </p>
+
+    <strong>
+        you are my favourite star. ⭐
+    </strong>
+
+    <button
+        onclick="closeFinalMessage()"
+        class="popup-btn"
+    >
+        ♡ I know
+    </button>
+
+</div>
+```
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
