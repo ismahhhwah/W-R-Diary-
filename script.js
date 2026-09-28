@@ -261,7 +261,7 @@ const memoryReasons = {
             "You;re My Star, My Moon, and My Sun.",
 
         text:
-            "sedap mata memndang tula nama kau bintang HAHAH indahnya awan malam bila kau ada disisi sayangku , kau lah bintangku , bulan ku dan matahari ku sayangku 💞"
+            "sedap mata memandang tula nama kau bintang HAHAH indahnya awan malam bila kau ada disisi sayangku , kau lah bintangku , bulan ku dan matahari ku sayangku 💞"
 
     },
 
@@ -273,7 +273,7 @@ const memoryReasons = {
             "I love the way you care.",
 
         text:
-            "penyayang - selalu nd prnh miss ckp ily setiap kali sayang pegi"
+            "penyayang - selalu tidak pernah miss ckp ily setiap kali sayang pergi"
 
     },
 
