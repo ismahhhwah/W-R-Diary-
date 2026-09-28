@@ -4099,7 +4099,7 @@ a {
 
 /* Mobile */
 
-@media (max-width: 300px) {
+@media (max-width: 650px) {
 
     #dinoScreen .dino-star-obstacle {
         width: 38px !important;
@@ -4372,7 +4372,7 @@ a {
    MOBILE
 ========================================= */
 
-@media (max-width: 650px) {
+@media (max-width: 300px) {
 
     .date-gate {
         padding: 16px;
