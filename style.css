@@ -4288,20 +4288,17 @@ a {
     margin-bottom: 8px;
 
     text-align: left;
-}
 
-.date-input-wrapper label {
-    padding-left: 4px;
-
-    color: #8b6874;
-
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 2px;
+    /* bagi wrapper boleh mengecut */
+    width: 100%;
+    min-width: 0;
 }
 
 .date-input-wrapper input {
+    /* sedia ada */
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
     padding: 14px 20px 14px 16px;
 
     box-sizing: border-box;
@@ -4310,26 +4307,34 @@ a {
     border-radius: 14px;
 
     outline: none;
-
     background: #fff;
-
     color: #53434a;
 
     font-family: "DM Sans", sans-serif;
-    font-size: 14px;
+    font-size: 16px; /* 14px buat iOS auto-zoom bila tap */
+
+    /* fix utama untuk iOS */
+    -webkit-appearance: none;
+    appearance: none;
+
+    /* biar teks tarikh ada ruang yang betul */
+    display: block;
+    min-height: 50px;
 
     transition:
         border-color 0.25s ease,
         box-shadow 0.25s ease;
 }
 
-.date-input-wrapper input:focus {
-    border-color: #d7a3b5;
-
-    box-shadow:
-        0 0 0 4px rgba(215, 163, 181, 0.12);
+/* iOS: bahagian dalam date input */
+.date-input-wrapper input::-webkit-date-and-time-value {
+    text-align: left;
+    min-height: 1.2em;
 }
 
+.date-input-wrapper input::-webkit-calendar-picker-indicator {
+    margin: 0;
+}
 
 /* =========================================
    ERROR MESSAGE
