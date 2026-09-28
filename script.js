@@ -258,7 +258,7 @@ const memoryReasons = {
         icon: "🌙",
 
         title:
-            "You;re My Star, My Moon, and My Sun.",
+            "WUVV YOUU MUAH",
 
         text:
             "sedap mata memandang tula nama kau bintang HAHAH indahnya awan malam bila kau ada disisi sayangku , kau lah bintangku , bulan ku dan matahari ku sayangku 💞"
