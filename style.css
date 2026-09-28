@@ -4416,6 +4416,7 @@ a {
         font-size: 16px;
     }
 }
+
 /* =========================================
    CHAPTER 1 LOCK SYSTEM
 ========================================= */
@@ -5536,36 +5537,6 @@ body.anniversary-open {
 .character-name {
     position: relative;
     z-index: 3;
-}
-
-/* =========================================
-   FINAL MOBILE DATE GATE FIX
-========================================= */
-
-.date-gate,
-.date-gate-box {
-    box-sizing: border-box;
-}
-
-.date-gate {
-    width: 100%;
-    max-width: 100vw;
-    padding: 16px;
-}
-
-.date-gate-box {
-    width: 320px;
-    max-width: 100%;
-    padding: 38px 20px 27px;
-    box-sizing: border-box;
-}
-
-.date-input-wrapper,
-.date-input-wrapper input,
-.date-continue-btn {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
 }
 
 
