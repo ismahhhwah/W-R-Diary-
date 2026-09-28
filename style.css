@@ -4154,7 +4154,7 @@ a {
     position: relative;
 
     width: min(460px, 100%);
-    box-sizing: border-box;
+    max-width: calc(100vw - 40px);
     padding: 48px 38px 42px;
 
     text-align: center;
@@ -5540,16 +5540,7 @@ body.anniversary-open {
     z-index: 3;
 }
 
-/* TEMPORARY DATE GATE FIX */
-.date-gate {
-    overflow: hidden !important;
-}
 
-.date-gate-box {
-    width: 320px !important;
-    max-width: calc(100vw - 40px) !important;
-    box-sizing: border-box !important;
-}
 
 
 
