@@ -5540,6 +5540,17 @@ body.anniversary-open {
     z-index: 3;
 }
 
+/* TEMPORARY DATE GATE FIX */
+.date-gate {
+    overflow: hidden !important;
+}
+
+.date-gate-box {
+    width: 320px !important;
+    max-width: calc(100vw - 40px) !important;
+    box-sizing: border-box !important;
+}
+
 
 
 
