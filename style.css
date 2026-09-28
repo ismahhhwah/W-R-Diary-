@@ -4125,7 +4125,7 @@ a {
     align-items: center;
     justify-content: center;
 
-   padding: 20px;
+    padding: 20px;
 
     background: rgba(35, 24, 32, 0.58);
     backdrop-filter: blur(10px);
@@ -4288,9 +4288,6 @@ a {
     margin-bottom: 8px;
 
     text-align: left;
-
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .date-input-wrapper label {
@@ -4305,9 +4302,6 @@ a {
 
 .date-input-wrapper input {
     width: 100%;
-    max-width: 100%;
-    min-width: 0;
-
     padding: 14px 16px;
 
     box-sizing: border-box;
@@ -4327,8 +4321,6 @@ a {
     transition:
         border-color 0.25s ease,
         box-shadow 0.25s ease;
-
-    appearance: auto;
 }
 
 .date-input-wrapper input:focus {
@@ -5546,6 +5538,7 @@ body.anniversary-open {
     position: relative;
     z-index: 3;
 }
+
 
 
 
